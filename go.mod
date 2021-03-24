@@ -1,4 +1,4 @@
-module github.com/ronaudinho/dbbeat
+module github.com/rassu/dbbeat
 
 go 1.15
 
@@ -27,20 +27,20 @@ require (
 	github.com/dop251/goja_nodejs v0.0.0-20201222133159-1629e8d0b836 // indirect
 	github.com/elastic/beats/v7 v7.0.0-alpha2.0.20210218100255-661a55734beb
 	github.com/fatih/color v1.10.0 // indirect
-	github.com/garyburd/redigo v1.0.1-0.20160525165706-b8dc90050f24 // indirect
+	github.com/fsouza/go-dockerclient v1.7.2 // indirect
+	github.com/gliderlabs/logspout v3.2.6+incompatible
 	github.com/go-sourcemap/sourcemap v2.1.3+incompatible // indirect
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/jackc/pgx v3.6.2+incompatible // indirect
 	github.com/josephspurrier/goversioninfo v1.2.0 // indirect
 	github.com/lib/pq v1.9.0
+	github.com/looplab/logspout-logstash v0.0.0-20200721102059-f6992c03834b
 	github.com/magefile/mage v1.11.0
 	github.com/mitchellh/gox v1.0.1
 	github.com/mitchellh/hashstructure v1.1.0 // indirect
 	github.com/pierrre/gotestcover v0.0.0-20160517101806-924dca7d15f0
 	github.com/prometheus/procfs v0.6.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
-	github.com/reviewdog/reviewdog v0.9.17 // indirect
 	github.com/tsg/go-daemon v0.0.0-20200207173439-e704b93fd89b
 	go.elastic.co/apm v1.11.0 // indirect
 	go.elastic.co/ecszap v1.0.0 // indirect

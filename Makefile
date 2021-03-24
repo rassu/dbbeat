@@ -1,5 +1,5 @@
 BEAT_NAME=dbbeat
-BEAT_PATH=github.com/ronaudinho/dbbeat
+BEAT_PATH=github.com/rassu/dbbeat
 BEAT_GOPATH=$(firstword $(subst :, ,${GOPATH}))
 SYSTEM_TESTS=false
 TEST_ENVIRONMENT=false
@@ -26,7 +26,21 @@ install-mage:
 
 .PHONY: docker
 docker:
-	docker run --rm -d --name some-postgres -e POSTGRES_PASSWORD=pwd -p 5432:5432 postgres && docker run --rm -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+	docker run --rm -d --name some-postgres -e POSTGRES_PASSWORD=pwd -p 5432:5432 postgres && (cd docker-elk && docker-compose up -d kibana elasticsearch)
+
+.PHONY: stop-docker
+stop-docker:
+	docker stop some-postgres && (cd docker-elk && docker-compose stop kibana elasticsearch)
+
+.PHONY: test-create-db
+test-create-db:
+	cd examples && BEAT_STRICT_PERMS=false go run main.go create
+
+.PHONY: test-insert-db
+test-insert-db:
+	cd examples && BEAT_STRICT_PERMS=false go run main.go insert
+
+
 
 build:
 	go build -o dbbeat main.go

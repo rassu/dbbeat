@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/ronaudinho/dbbeat/cmd"
+	"github.com/rassu/dbbeat/cmd"
 
-	_ "github.com/ronaudinho/dbbeat/include"
+	_ "github.com/rassu/dbbeat/include"
 )
 
 func main() {

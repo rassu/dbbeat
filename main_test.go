@@ -6,7 +6,7 @@ import (
 	"flag"
 	"testing"
 
-	"github.com/ronaudinho/dbbeat/cmd"
+	"github.com/rassu/dbbeat/cmd"
 )
 
 var systemTest *bool

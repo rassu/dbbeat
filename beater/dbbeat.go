@@ -10,8 +10,8 @@ import (
 	"github.com/elastic/beats/v7/libbeat/common"
 	"github.com/elastic/beats/v7/libbeat/logp"
 
-	"github.com/ronaudinho/dbbeat/config"
-	"github.com/ronaudinho/dbbeat/postgres"
+	"github.com/rassu/dbbeat/config"
+	"github.com/rassu/dbbeat/postgres"
 )
 
 // dbBeat configuration.

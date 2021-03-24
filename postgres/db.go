@@ -7,7 +7,7 @@ import (
 	"log"
 
 	"github.com/lib/pq"
-	"github.com/ronaudinho/dbbeat/config"
+	"github.com/rassu/dbbeat/config"
 )
 
 type Conn struct {

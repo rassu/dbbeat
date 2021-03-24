@@ -4,7 +4,7 @@
 
 dbbeat:
   db_config:
-    uri: "postgres://postgres:pwd@localhost:5432/new_database?sslmode=disable"
+    uri: "postgres://postgres:pwd@localhost:5432/postgres?sslmode=disable"
     # min_reconn: 10
     # max_reconn: 1
     # watch_all: true

@@ -20,8 +20,8 @@ convention `{database name}-{table name}`
 - mage *(optional)*
   * Run command: `make install-mage`
 
-- docker *(for test purpose only)*
-  * We used docker to run Postgres and Elasticsearch (you can just run command `make docker`):
+- docker and docker-compose *(for test purpose only)*
+  * We used docker to run Postgres, Elasticsearch and Kibana (you can just run command `make docker`):
 
 ### Build Beats
 
@@ -59,9 +59,12 @@ example usage of populating Postgres database and doing operations, not industry
 ### Testing Steps
 
 1. Insert/Update/Delete a record from the database.
+    - create tables: `make test-create-db`
+    - insert data: `make test-insert-db`
+1. Assuming you run Elasticsearch and Kibana following the above setup,
+open `http://localhost:5601`
 
-1. Assuming you run Elasticsearch following the above setup,
-open `http://localhost:9200/_cat/indices`
+2. Enter username/password: elastic/changeme
 and you should see something like:
 ```yellow open db-names UmcF96y1QA-TOU6cQGO-dw 1 1 1 0 20.1kb 20.1kb```
 where `db-names` is the name of the index where the beats are shipped into.

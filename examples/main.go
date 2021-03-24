@@ -9,7 +9,7 @@ import (
 	"os"
 
 	_ "github.com/lib/pq"
-	"github.com/ronaudinho/dbbeat/config"
+	"github.com/rassu/dbbeat/config"
 )
 
 func main() {
@@ -18,6 +18,8 @@ func main() {
 	}
 	mod := os.Args[1]
 	c := config.DefaultConfig
+
+	log.Printf("config %s", c.DBConfig.URI)
 	db, err := sql.Open("postgres", c.DBConfig.URI)
 	if err != nil {
 		log.Fatal(err)
