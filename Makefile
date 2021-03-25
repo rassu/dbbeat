@@ -44,3 +44,6 @@ test-insert-db:
 
 build:
 	go build -o dbbeat main.go
+
+run:
+	BEAT_STRICT_PERMS=false go run main.go  -e -d "*"
