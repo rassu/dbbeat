@@ -1,6 +1,6 @@
 # Database Beat
 
-Elastic Beats to enable CRUD events (only ships events about insert, update and delete operations and no ships of read operations) to sync Elastic index with
+Elastic Beats to enable Postgres CRUD events (only ships events about insert, update and delete operations and no ships of read operations) to sync Elastic index with
 Postgres database. Tool will create a trigger to trace database
 transactions and send it to Elasticsearch index that has name
 convention `{database name}-{table name}`
